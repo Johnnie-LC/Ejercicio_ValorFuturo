@@ -1,3 +1,5 @@
+import './index.css'
+
 const form = document.getElementById('form')
 
 const vp = document.getElementById('vp')
