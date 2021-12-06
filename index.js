@@ -63,7 +63,7 @@ form.addEventListener('submit', (e) => {
       parseInt(vp.value) *
       Math.pow(1 + parseFloat(ip.value), parseInt(ntp.value))
 
-    valorFuturo.innerText = vf.toString()
+    valorFuturo.innerText = vf.toFixed(4).toString()
     // form.reset()
   }
 })
