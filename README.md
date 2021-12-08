@@ -1,25 +1,23 @@
-# Ejercicio_ValorFuturo
-En este ejercicio tendrás que calcular el valor futuro de una inversión con base en el valor presente de la inversión, el interés y el periodo. 
+# Valor Futuro
+
+Application made with in JS that show the future value that allows you to obtain the **future value**, entering the **present value**, the **interest per period** and the **number of periods**.
+
+# Technologies used
+
+The technologies that I handled in this project were JavaScript (JS), CSS, HTML, regular expressions (regex) was used to validate the input data.
+
+## Info
+
+To find the future value you need enter the following parameters:
+
+ - **Valor presente**: the present value you want to know in the future, that parameter only allows positive integer values. 
+ - **Interés Periodo**: the interest per period, that parameter only allows values ​​between 0 to 1, for example, 0.02 or 0.5 representing 2% or 50% interest.
+ - **Total de Periodos**: Total number of periods, it   allows positive integer values. 
+
+As an example if a person decides to invest **1000** at a rate of **50%** (**0.5**) per period for **5** periods, then at the end of the **5** periods at the end their investment will be worth a total of **7593.75**
+
+<img alt="input" width="300" src='https://raw.githubusercontent.com/Johnnie-LC/Ejercicio_ValorFuturo/main/screenshot/futureValueExample.png' />
 
 ## Demo
+
 [Valor Futuro](https://johnnie-lc.github.io/Ejercicio_ValorFuturo/)
-
-
-## Descripción
-El valor futuro de una inversión es justamente entender cuál va a ser el dinero en el futuro cuando acabe esta inversión o después de un cierto tiempo. Para esto lo puedes obtener si tienes el interés dado al periodo de esta inversión, el número de periodos a invertir y el valor presente, o cuánto vale el dinero al día de hoy. Esto se puede calcular con base en la siguiente fórmula:
-
-<img src="https://latex.codecogs.com/gif.latex?%5Cdpi%7B300%7D%20VF%3DVP%281&plus;i%29%5En " /> 
-
-Donde:
-- VF = Valor Futuro
-- VP = Valor presente
-- i = interés del periodo
-- n = total de periodos
-
-Como un ejemplo si una persona decide invertir 100 a una tasa del 1% por periodo por 10 periodos, entonces al final de los 10 periodos al final su inversión valdrá un total de 100*(1.01)^10=110.4
-
-## Siguientes pasos
-Usa algebra para despejar la fórmula y que igual puedas obtener calquiera de los valores (VP, i o n) dados los otros 3 valores. 
-
-## Bonus
-Investiga que es el interés convertido nominal y aplícalo en tu fórmula.
