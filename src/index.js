@@ -2,21 +2,25 @@ import './index.css'
 
 const form = document.getElementById('form')
 
-const vp = document.getElementById('vp')
-const vpInfoError = document.getElementById('vp-info-error')
+const valorPresente = document.getElementById('valorPresente')
+const valorPresenteInfoError = document.getElementById('valorPresenteInfoError')
 
-const ip = document.getElementById('ip')
-const ipInfoError = document.getElementById('ip-info-error')
+const interesPeriodo = document.getElementById('interesPeriodo')
+const interesPeridoInfoError = document.getElementById(
+  'interesPeriodoInfoError'
+)
 
-const ntp = document.getElementById('ntp')
-const ntpInfoError = document.getElementById('ntp-info-error')
+const numeroTotalPeridos = document.getElementById('numeroTotalPeridos')
+const numeroTotalPeridosInfoError = document.getElementById(
+  'numeroTotalPeridosInfoError'
+)
 
-const valorFuturo = document.getElementById('value')
+const valorFuturo = document.getElementById('valorFuturo')
 
 const field = {
-  vp: false,
-  ip: false,
-  ntp: false,
+  valorPresente: false,
+  interesPeriodo: false,
+  numeroTotalPeridos: false,
 }
 
 const spressions = {
@@ -31,26 +35,39 @@ const fieldValidate = (spressions, input, inputError, e) => {
     input.classList.add('validateForm')
     inputError.classList.remove('invalidate')
     field[input.id] = true
-    console.log(`field.${input}`, field[input.id])
   } else {
     input.classList.remove('validateForm')
     input.classList.add('invalidateForm')
     inputError.classList.add('invalidate')
     field[input.id] = false
-    console.log(`field.${input.id}`, field[input.id])
   }
 }
 
 const formValidate = (e) => {
   switch (e.target.id) {
-    case 'vp':
-      fieldValidate(spressions.valorPresente, vp, vpInfoError, e.target)
+    case 'valorPresente':
+      fieldValidate(
+        spressions.valorPresente,
+        valorPresente,
+        valorPresenteInfoError,
+        e.target
+      )
       break
-    case 'ip':
-      fieldValidate(spressions.interesPeriodo, ip, ipInfoError, e.target)
+    case 'interesPeriodo':
+      fieldValidate(
+        spressions.interesPeriodo,
+        interesPeriodo,
+        interesPeridoInfoError,
+        e.target
+      )
       break
-    case 'ntp':
-      fieldValidate(spressions.totalPeriodos, ntp, ntpInfoError, e.target)
+    case 'numeroTotalPeridos':
+      fieldValidate(
+        spressions.totalPeriodos,
+        numeroTotalPeridos,
+        numeroTotalPeridosInfoError,
+        e.target
+      )
       break
   }
 }
@@ -60,12 +77,14 @@ form.addEventListener('keyup', formValidate)
 form.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  if (field.vp && field.ip && field.ntp) {
+  if (field.valorPresente && field.interesPeriodo && field.numeroTotalPeridos) {
     const vf =
-      parseInt(vp.value) *
-      Math.pow(1 + parseFloat(ip.value), parseInt(ntp.value))
+      parseInt(valorPresente.value) *
+      Math.pow(
+        1 + parseFloat(interesPeriodo.value),
+        parseInt(numeroTotalPeridos.value)
+      )
 
     valorFuturo.innerText = vf.toFixed(4).toString()
-    // form.reset()
   }
 })
