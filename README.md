@@ -2,6 +2,10 @@
 
 Application made with in JS that show the future value that allows you to obtain the **future value**, entering the **present value**, the **interest per period** and the **number of periods**.
 
+## Demo
+
+[Valor Futuro](https://johnnie-lc.github.io/Ejercicio_ValorFuturo/)
+
 # Technologies used
 
 The technologies that I handled in this project were JavaScript (JS), CSS, HTML, regular expressions (regex) was used to validate the input data.
@@ -17,7 +21,3 @@ To find the future value you need enter the following parameters:
 As an example if a person decides to invest **1000** at a rate of **50%** (**0.5**) per period for **5** periods, then at the end of the **5** periods at the end their investment will be worth a total of **7593.75**
 
 <img alt="input" width="300" src='https://raw.githubusercontent.com/Johnnie-LC/Ejercicio_ValorFuturo/main/screenshot/futureValueExample.png' />
-
-## Demo
-
-[Valor Futuro](https://johnnie-lc.github.io/Ejercicio_ValorFuturo/)
